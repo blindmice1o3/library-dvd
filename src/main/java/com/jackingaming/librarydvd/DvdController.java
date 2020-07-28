@@ -1,5 +1,6 @@
 package com.jackingaming.librarydvd;
 
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -11,6 +12,8 @@ public class DvdController {
     private List<Dvd> dvds = new ArrayList<Dvd>();
 
     public DvdController() {
+        dvds.add(new Dvd(1, "Homer", false));
+        dvds.add(new Dvd(2, "Bart", false));
     }
 
     @PostMapping(path = "/dvds")
